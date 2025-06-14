@@ -1,0 +1,30 @@
+.containerHeader{
+    background-color: var(--color-primary);
+    color: var(--color-light);
+    width: 100%;
+    height: 60px;
+    padding: 0 10px;
+    display: flex;
+    align-items: center;
+}
+
+.containerHeaderTitle{
+    width: 50%;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    text-decoration: none;
+    color: var(--color-light);
+}
+
+.containerHeaderTitle h1{
+    font-size: 2rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: -0.9px;
+}
+
+.containerHeaderTitle h1 span{
+    color: var(--color-gold); 
+    font-weight: 400;
+}
