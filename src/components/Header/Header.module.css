@@ -1,6 +1,7 @@
 .containerHeader{
-    background-color: var(--color-primary);
+    background-color: 	rgba(0, 0, 0, 0.8);
     color: var(--color-light);
+    border-bottom: 2px solid var(--color-primary);
     width: 100%;
     height: 60px;
     display: flex;
@@ -29,4 +30,82 @@
 .containerHeaderTitle h1 span{
     color: var(--color-gold); 
     font-weight: 400;
+}
+
+.btnMenu {
+    display: none;
+    font-size: 28px;
+    background: none;
+    border: none;
+    color: var(--color-light);
+    cursor: pointer;
+}
+
+.navMenu {
+    width: 50%;
+    display: flex;
+    gap: 16px;
+}
+
+.navMenu ul{
+    display: flex;
+    gap: 20px;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+    max-width: 700px;
+}
+
+.navMenu ul li{
+    list-style: none;
+    transition: transform 0.3s ease;
+}
+
+.navMenu ul li:hover{
+    transform: scale(1.10);
+}
+
+.navLinks{
+    text-decoration: none;
+    color: var(--color-light);
+    display: inline-block;
+}
+
+.navLinks::after{
+    content: "";
+    position: absolute;
+    bottom: -3px;
+    left: 50%;
+    width: 0;
+    height: 1px;
+    background-color: var(--color-gold);
+    transform: translateX(-50%);
+    transition: width 0.3s ease;
+}
+
+.navLinks:hover::after {
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    .btnMenu {
+        display: block;
+    }
+
+    .navMenu {
+        display: none;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        right: 0;
+        background: #111;
+        padding: 16px;
+        flex-direction: column;
+        align-items: center;
+        z-index: 1000;
+    }
+
+    .menuAberto {
+        display: flex;
+    }
 }
