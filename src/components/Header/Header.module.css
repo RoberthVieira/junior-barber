@@ -1,5 +1,5 @@
-.containerHeader{
-    background-color: 	rgba(0, 0, 0, 0.8);
+.containerHeader {
+    background-color: rgba(0, 0, 0, 0.8);
     color: var(--color-light);
     border-bottom: 2px solid var(--color-primary);
     width: 100%;
@@ -8,27 +8,27 @@
     align-items: center;
 }
 
-.containerHeaderBoxTitle{
+.containerHeaderBoxTitle {
     width: 50%;
     display: flex;
     align-items: center;
     padding: 0 10px;
 }
 
-.containerHeaderTitle{
+.containerHeaderTitle {
     text-decoration: none;
     color: var(--color-light);
 }
 
-.containerHeaderTitle h1{
+.containerHeaderTitle h1 {
     font-size: 2rem;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: -0.9px;
 }
 
-.containerHeaderTitle h1 span{
-    color: var(--color-gold); 
+.containerHeaderTitle h1 span {
+    color: var(--color-gold);
     font-weight: 400;
 }
 
@@ -47,31 +47,32 @@
     gap: 16px;
 }
 
-.navMenu ul{
+.navMenu ul {
     display: flex;
     gap: 20px;
     justify-content: flex-end;
     align-items: center;
     width: 100%;
     max-width: 700px;
+    padding-right: 10px;
 }
 
-.navMenu ul li{
+.navMenu ul li {
     list-style: none;
     transition: transform 0.3s ease;
 }
 
-.navMenu ul li:hover{
+.navMenu ul li:hover {
     transform: scale(1.10);
 }
 
-.navLinks{
+.navLinks {
     text-decoration: none;
     color: var(--color-light);
     display: inline-block;
 }
 
-.navLinks::after{
+.navLinks::after {
     content: "";
     position: absolute;
     bottom: -3px;
@@ -90,22 +91,49 @@
 @media (max-width: 768px) {
     .btnMenu {
         display: block;
+        position: absolute;
+        right: 20px;
+        z-index: 1100;
+        font-size: 32px;
+        cursor: pointer;
+        color: var(--color-gold);
     }
 
     .navMenu {
-        display: none;
+        display: flex;
+        flex-direction: column;
         position: absolute;
         top: 60px;
-        left: 0;
         right: 0;
-        background: #111;
+        background: rgba(0, 0, 0, 0.8);
+        border-radius: 0 0 8px 8px;
         padding: 16px;
-        flex-direction: column;
-        align-items: center;
         z-index: 1000;
+        width: 180px;
+        opacity: 0;
+        transform: translateY(-10px);
+        pointer-events: none;
+        transition: opacity 0.3s ease, transform 0.3s ease;
     }
 
     .menuAberto {
+        opacity: 1;
+        transform: translateY(0);
+        pointer-events: auto;
+    }
+
+    .navMenu ul {
+        list-style: none;
+        padding: 0;
         display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+    }
+
+    .navMenu ul li{
+        font-size: 16px;
+        margin: 15px;
+        cursor: pointer;
     }
 }

@@ -14,7 +14,7 @@ export default function Header(){
         <header className={styles.containerHeader}>
             <div className={styles.containerHeaderBoxTitle}>
                 <Link href='/' className={styles.containerHeaderTitle}>
-                        <h1>Junior <span>Barber</span></h1>
+                        <h1>Junior <span className="spanTitle">Barber</span></h1>
                 </Link>
             </div>
             <button className={styles.btnMenu} onClick={alternaMenu}>
@@ -35,7 +35,7 @@ export default function Header(){
                         <a href='#galeria' className={styles.navLinks}>Galeria</a>
                     </li>
                     <li>
-                        <a href='#agendamento' className={styles.navLinks}>Agende um Horário</a>
+                        <a href='#agendamento' className={styles.navLinks}>Agendamento</a>
                     </li>
                     <li>
                         <a href='#contato' className={styles.navLinks}>Contato</a>
